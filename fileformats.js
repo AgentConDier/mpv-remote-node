@@ -34,6 +34,7 @@ const FILE_FORMATS = {
     ".mp2",
     ".mp3",
     ".m4a",
+    ".m4b",
     ".aac",
     ".flac",
     ".oga",
