@@ -837,7 +837,9 @@ async function showOSDMessage(text, timeout = null) {
 
 async function main() {
   try {
-    // Creates/clears file local options file.
+    // Wait a bit to make sure our parent MPV process is ready for IPC connections
+    await new Promise(resolve => setTimeout(resolve, 500));
+    // Connect to the MPV socket. Spawns a new MPV instance if the socket is defunct.
     await mpv.start();
 
     // Create file-local-options if not exists.
