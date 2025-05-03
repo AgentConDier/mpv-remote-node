@@ -838,7 +838,7 @@ async function showOSDMessage(text, timeout = null) {
 async function main() {
   try {
     // Wait a bit to make sure our parent MPV process is ready for IPC connections
-    await new Promise(resolve => setTimeout(resolve, 500));
+    await new Promise(resolve => setTimeout(resolve, 2000));
     // Connect to the MPV socket. Spawns a new MPV instance if the socket is defunct.
     await mpv.start();
 
